@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Accueil - Jeu des 7 familles</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bienvenue au jeu des 7 familles !</h1>
+    <form>
+      <label for="name">Quel est votre nom ?</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label>Choisissez un avatar :</label>
+      <div class="avatar-container">
+        <img src="avatar1.png" alt="Avatar 1">
+        <img src="avatar2.png" alt="Avatar 2">
+        <img src="avatar3.png" alt="Avatar 3">
+      </div>
+      <br>
+      <button type="submit">Continuer</button>
+    </form>
+
+    <h2>Choisissez les options de la partie :</h2>
+    <form>
+      <label for="theme">Quel thème souhaitez-vous ?</label>
+      <select id="theme" name="theme">
+        <option value="animaux">Animaux</option>
+        <option value="vetements">Vêtements</option>
+        <option value="maison">Objets de la maison</option>
+        <option value="futur">Conjugaison du futur</option>
+        <option value="pays">Les pays francophones</option>
+      </select>
+      <br>
+      <label for="num-players">Combien de joueurs seront de la partie ?</label>
+      <select id="num-players" name="num-players">
+        <option value="2">2 joueurs</option>
+        <option value="3">3 joueurs</option>
+        <option value="4">4 joueurs</option>
+        <option value="5">5 joueurs</option>
+        <option value="6">6 joueurs</option>
+      </select>
+      <br>
+      <label>Choisissez l'une des options suivantes :</label>
+      <div class="game-mode-container">
+        <input type="radio" id="computer-mode" name="game-mode" value="computer-mode">
+        <label for="computer-mode">Jouer contre l'ordinateur</label>
+        <br>
+        <input type="radio" id="friends-mode" name="game-mode" value="friends-mode">
+        <label for="friends-mode">Jouer contre vos amis</label>
+      </div>
+      <br>
+      <div id="invitation-link-container" style="display:none">
+        <p>Transmettez ce lien d'invitation à vos amis :</p>
+        <input type="text" id="invitation-link" readonly>
+      </div>
+      <button type="submit" id="start-game-btn" style="display:none">Lancer la partie</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
